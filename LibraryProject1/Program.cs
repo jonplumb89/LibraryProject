@@ -7,6 +7,9 @@ namespace LibraryProject1
     {
         static void Main(string[] args)
         {
+            //creating library file
+            var fileName = "library.txt";
+            FileService.CreateFile(fileName);
             // creating library book database
             List<Book> bookList = new List<Book>();
             bookList.Add(new Book()
@@ -93,6 +96,9 @@ namespace LibraryProject1
                 Status = true,
                 DueDate = "Date.now"
             });
+
+            FileService.SaveArrayAsCSV<Book>(bookList, fileName);
+            FileService.ConvertCSVToArray(fileName);
         }
     }
 }
