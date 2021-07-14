@@ -1,0 +1,13 @@
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\bin\Debug\netcoreapp3.1\LibraryProject1.exe
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\bin\Debug\netcoreapp3.1\LibraryProject1.deps.json
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\bin\Debug\netcoreapp3.1\LibraryProject1.runtimeconfig.json
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\bin\Debug\netcoreapp3.1\LibraryProject1.runtimeconfig.dev.json
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\bin\Debug\netcoreapp3.1\LibraryProject1.dll
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\bin\Debug\netcoreapp3.1\LibraryProject1.pdb
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.csprojAssemblyReference.cache
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.AssemblyInfoInputs.cache
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.AssemblyInfo.cs
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.csproj.CoreCompileInputs.cache
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.dll
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.pdb
+C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.genruntimeconfig.cache
