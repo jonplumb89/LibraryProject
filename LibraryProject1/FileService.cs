@@ -58,7 +58,7 @@ namespace LibraryProject1
                         Title = dataArray[0],
                         Author = dataArray[1],
                         Status = bool.Parse(dataArray[2]),
-                        DueDate = dataArray[3]
+                        DueDate = DateTime.Parse(dataArray[3])
                     });
                 }
                 books.ForEach(book =>
