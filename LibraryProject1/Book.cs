@@ -7,6 +7,7 @@ namespace LibraryProject1
 {
     public class Book
     {
+        public string BookID { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
         public bool Status { get; set; }
