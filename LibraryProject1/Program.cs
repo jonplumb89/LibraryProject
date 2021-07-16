@@ -99,7 +99,30 @@ namespace LibraryProject1
             
         }
 
-       
+        public static void CheckingOutBook(string userSelection, List<Book> bookList)
+        {
+            DateTime checkoutDay = DateTime.Now;
+            DateTime bookDueDate = checkoutDay.AddDays(14);
+            foreach (Book b in bookList)
+            {
+                if (b.Title.Equals(userSelection) || b.Author.Equals(userSelection))
+                {
+                    if (b.Status.Equals(false))
+                    {
+                        Console.WriteLine("This book is currently checked out.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{userSelection} is being checked out on : {checkoutDay:MM/dd/yyyy}.");
+                        Console.WriteLine($"{userSelection} , will be due back on : {bookDueDate:MM/dd/yyyy}.");
+                        b.Status.Equals(false);
+
+                    }
+                }
+
+            }
+
+        }
     }
 
 }
