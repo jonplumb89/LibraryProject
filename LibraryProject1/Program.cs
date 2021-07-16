@@ -87,7 +87,7 @@ namespace LibraryProject1
             {
                 Title = "Song of Blood and Stone",
                 Author = "L. Penelope",
-                Status = true,
+                Status = false,
                 DueDate = DateTime.Now
             });
             bookList.Add(new Book()
@@ -98,8 +98,52 @@ namespace LibraryProject1
                 DueDate = DateTime.Now
             });
 
-            FileService.SaveArrayAsCSV<Book>(bookList, fileName);
-            FileService.ConvertCSVToArray(fileName);
+            //FileService.SaveArrayAsCSV<Book>(bookList, fileName);
+            FileService.WriteBookToCSV(bookList, fileName);
+            FileService.ConvertCSVToArray(fileName); 
+            //Book newBook = new Book()
+            //{
+            //    Title = "jjjObsidian and Bloodsdfsdf",
+            //    Author = "jjjjAliette de Bodardsdffsf",
+            //    Status = false,
+            //    DueDate = DateTime.Now
+            //};
+            //FileService.AddBook(newBook, fileName);
+            //FileService.PrintBooksFile(fileName);
+            List<Book> books = FileService.SearchByType("Tomi Adeyemi", fileName, SearchTypeEnum.Author);
+            FileService.PrintBooks(books);
+            //CheckingOutBook(fileName, "Tomi Adeyemi");
+            //FileService.PrintBooksFile(fileName);
+            /*
+            foreach (var book in bookList)
+            {
+                Console.WriteLine($"Title: {book.Title} Author: {book.Author}");
+            }
+            */
+        }
+
+        public static void CheckingOutBook(string fileName, string userSelection)
+        {
+            DateTime checkoutDay = DateTime.Now;
+            DateTime bookDueDate = checkoutDay.AddDays(14);
+            List<Book> books = FileService.ConvertCSVToArray(fileName);
+
+            foreach (Book b in books)
+            {
+                if (b.Title.Equals(userSelection))
+                {
+                    if (b.Status.Equals(false))
+                    {
+                        Console.WriteLine("This book is currently checked out.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{userSelection} {bookDueDate}");
+
+                    }
+                }
+            }
         }
     }
 }
