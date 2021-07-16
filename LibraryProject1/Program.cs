@@ -7,8 +7,11 @@ namespace LibraryProject1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(String.Format("{0, -3} | {1,-20} | {2, 5}", "BookID", "\t\tTitle", "\tAuthor"));
+            Console.WriteLine();
+
             //creating library file
-           // text = text.PadLeft(35);
+            // text = text.PadLeft(35);
             var fileName = "library.txt";
             FileService.CreateFile(fileName);
             // creating library book database
@@ -111,9 +114,11 @@ namespace LibraryProject1
                 DueDate = DateTime.Now
             });
 
+
             foreach (var Book in bookList)
             {
-                Console.WriteLine($"{Book.BookID,5}  {Book.Title,8} \t by\t {Book.Author}");
+                Console.WriteLine($"{Book.BookID,5} \t {Book.Title,-35} \t{Book.Author,10}");
+                Console.WriteLine();
             }
 
             
