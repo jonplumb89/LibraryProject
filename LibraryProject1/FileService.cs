@@ -44,13 +44,14 @@ namespace LibraryProject1
                 var firstline = file.ReadLine();
                 while ((line = file.ReadLine()) != null)
                 {
-                    string[] dataArray = line.Split(", ");
+                    string[] dataArray = line.Split(",");
                     books.Add(new Book()
                     {
-                        Title = dataArray[0],
-                        Author = dataArray[1],
-                        Status = bool.Parse(dataArray[2]),
-                        DueDate = DateTime.Parse(dataArray[3])
+                        BookID = dataArray[0],
+                        Title = dataArray[1],
+                        Author = dataArray[2],
+                        Status = bool.Parse(dataArray[3]),
+                        DueDate = DateTime.Parse(dataArray[4])
                     });
                 }
                 // returns objects with their proporties as an array

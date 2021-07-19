@@ -11,3 +11,16 @@ C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\obj\Debug\netcoreapp
 C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.dll
 C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.pdb
 C:\Users\jonpl\source\repos\LibraryProject1\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.genruntimeconfig.cache
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\bin\Debug\netcoreapp3.1\LibraryProject1.exe
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\bin\Debug\netcoreapp3.1\LibraryProject1.deps.json
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\bin\Debug\netcoreapp3.1\LibraryProject1.runtimeconfig.json
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\bin\Debug\netcoreapp3.1\LibraryProject1.runtimeconfig.dev.json
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\bin\Debug\netcoreapp3.1\LibraryProject1.dll
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\bin\Debug\netcoreapp3.1\LibraryProject1.pdb
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.csproj.AssemblyReference.cache
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.AssemblyInfoInputs.cache
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.AssemblyInfo.cs
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.csproj.CoreCompileInputs.cache
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.dll
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.pdb
+C:\Users\Alesi\source\repos\LibraryProject\LibraryProject1\obj\Debug\netcoreapp3.1\LibraryProject1.genruntimeconfig.cache
