@@ -1,5 +1,7 @@
-﻿using System;
+﻿using LibraryProject1.LibraryProject1;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LibraryProject1
 {
@@ -98,9 +100,24 @@ namespace LibraryProject1
                 DueDate = DateTime.Now
             });
 
-            FileService.SaveArrayAsCSV<Book>(bookList, fileName);
-            FileService.ConvertCSVToArray(fileName);
+            string userSelection = "Aliette de Bodard";
+            FileService.SearchByType("Gail Carriger", fileName, SearchTypeEnum.Author);
+            FileService.CheckingOutBook(userSelection, bookList, fileName)
+
+            //FileService.SaveArrayAsCSV<Book>(bookList, fileName);
+            //FileService.ConvertCSVToArray(fileName);
+            //SearchByAuthor(userInput, bookList);
+
+          
         }
+
+        //public static void SearchByAuthor(string userInput, List<Book> bookList)
+        //{
+        //    var findBookByAuthor = bookList.Where(w => w.Author.Equals(userInput));
+        //    Console.WriteLine(findBookByAuthor);
+        //}
+
+      
     }
 
 }
