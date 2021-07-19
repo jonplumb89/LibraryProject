@@ -1,5 +1,7 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LibraryProject1
 {
@@ -98,6 +100,15 @@ namespace LibraryProject1
                 DueDate = DateTime.Now
             });
 
+            string userSelection = "Aliette de Bodard";
+            FileService.SearchByType("Gail Carriger", fileName, SearchTypeEnum.Author);
+            //FileService.CheckingOutBook(userSelection, bookList, fileName);
+
+            //FileService.SaveArrayAsCSV<Book>(bookList, fileName);
+            //FileService.ConvertCSVToArray(fileName);
+            //SearchByAuthor(userInput, bookList);
+
+          
             //FileService.SaveArrayAsCSV<Book>(bookList, fileName);
             FileService.WriteBookToCSV(bookList, fileName);
             FileService.ConvertCSVToArray(fileName); 
@@ -123,28 +134,37 @@ namespace LibraryProject1
             */
         }
 
-        public static void CheckingOutBook(string fileName, string userSelection)
-        {
-            DateTime checkoutDay = DateTime.Now;
-            DateTime bookDueDate = checkoutDay.AddDays(14);
-            List<Book> books = FileService.ConvertCSVToArray(fileName);
+        //public static void CheckingOutBook(string fileName, string userSelection)
+        //{
+        //    DateTime checkoutDay = DateTime.Now;
+        //    DateTime bookDueDate = checkoutDay.AddDays(14);
+        //    List<Book> books = FileService.ConvertCSVToArray(fileName);
 
-            foreach (Book b in books)
-            {
-                if (b.Title.Equals(userSelection))
-                {
-                    if (b.Status.Equals(false))
-                    {
-                        Console.WriteLine("This book is currently checked out.");
+        //    foreach (Book b in books)
+        //    {
+        //        if (b.Title.Equals(userSelection))
+        //        {
+        //            if (b.Status.Equals(false))
+        //            {
+        //                Console.WriteLine("This book is currently checked out.");
 
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{userSelection} {bookDueDate}");
+        //            }
+        //            else
+        //            {
+        //                Console.WriteLine($"{userSelection} {bookDueDate}");
 
-                    }
-                }
-            }
-        }
+        //            }
+        //        }
+        //    }
+        //}
+
+        //public static void SearchByAuthor(string userInput, List<Book> bookList)
+        //{
+        //    var findBookByAuthor = bookList.Where(w => w.Author.Equals(userInput));
+        //    Console.WriteLine(findBookByAuthor);
+        //}
+
+      
     }
+
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.CompilerServices;
+﻿
+using Microsoft.VisualBasic.CompilerServices;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,7 +14,7 @@ namespace LibraryProject1
         //creates file
         public static void CreateFile(string fileName)
         {
-            if (!File.Exists(fileName)) 
+            if (!File.Exists(fileName))
             {
                 File.Create(fileName);
             }
@@ -28,7 +29,7 @@ namespace LibraryProject1
                 file.WriteLine($"{book.Author}, {book.Title}, {book.Status}, {book.DueDate}");
             }
         }
-        
+
         //splits up the values of the list objects so they can be used in other methods
         public static List<Book> ConvertCSVToArray(string filename)
         {
@@ -57,28 +58,29 @@ namespace LibraryProject1
             }
 
         }
-      
+
         //made enum for search type and put it in arguments of method so we can use one method to search by
         //author,title, or status
         public static List<Book> SearchByType(string keyword, string fileName, SearchTypeEnum searchType)
         {
             //gets books from file and puts it into list of books
             List<Book> books = ConvertCSVToArray(fileName);
-            var filteredBooks = books.FindAll(book => {
+            var filteredBooks = books.FindAll(book =>
+            {
                 // setsup string to convert proporty into string when searching
                 string proporty = searchType.ToString();
                 // searches through the proporties of each book and looks for the keyword ("title", "author", "status")
                 // based on the searchType enum
-                if(book.GetType().GetProperty(proporty).GetValue(book, null).ToString() == keyword)
+                if (book.GetType().GetProperty(proporty).GetValue(book, null).ToString() == keyword)
                 {
                     return true;
                 }
                 return false;
-                
+
             });
             //returns the list of matched books
             return filteredBooks;
-            
+
         }
 
 
@@ -111,28 +113,54 @@ namespace LibraryProject1
             });
         }
 
-        public static void CheckingOutBook(string fileName, string userSelection)
+
+        ////public static List<Book> SearchByType(string keyword, string fileName, SearchTypeEnum searchType)
+        //{
+        //    //gets books from file and puts it into list of books
+        //    List<Book> books = ConvertCSVToArray(fileName);
+        //    var filteredBooks = books.FindAll(book =>
+        //    {
+        //        // setsup string to convert proporty into string when searching
+        //        string proporty = searchType.ToString();
+        //        // searches through the proporties of each book and looks for the keyword ("title", "author", "status")
+        //        // based on the searchType enum
+        //        if (book.GetType().GetProperty(proporty).GetValue(book, null).ToString() == keyword)
+        //        {
+        //            return true;
+        //        }
+        //        return false;
+        //    });
+        //    //returns the list of matched books
+        //    return filteredBooks;
+        //}
+        public static void CheckingOutBook(string userSelection, List<Book> bookList)
         {
             DateTime checkoutDay = DateTime.Now;
             DateTime bookDueDate = checkoutDay.AddDays(14);
-            List<Book> books = ConvertCSVToArray(fileName);
-
-            foreach (Book b in books)
+            foreach (Book b in bookList)
             {
-                if (b.Title.Equals(userSelection))
+                if (b.Title.Equals(userSelection) || b.Author.Equals(userSelection))
                 {
                     if (b.Status.Equals(false))
                     {
                         Console.WriteLine("This book is currently checked out.");
-
                     }
                     else
                     {
-                        Console.WriteLine($"{userSelection} {bookDueDate}");
+                        Console.WriteLine($"{userSelection} is being checked out on : {checkoutDay:MM/dd/yyyy}.");
+                        Console.WriteLine($"{userSelection} , will be due back on : {bookDueDate:MM/dd/yyyy}.");
+                        b.Status.Equals(false);
                     }
                 }
             }
         }
-
+        //this method checked to see if the b.status.equals(false) worked or not 
+        public static void CheckTheStatus(string userSelection, List<Book> bookList)
+        {
+            foreach (Book b in bookList)
+            {
+                Console.WriteLine(b.Status.Equals(userSelection));
+            }
+        }
     }
 }
