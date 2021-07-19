@@ -74,9 +74,11 @@ namespace LibraryProject1
                     return true;
                 }
                 return false;
+                
             });
             //returns the list of matched books
             return filteredBooks;
+            
         }
 
 

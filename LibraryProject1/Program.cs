@@ -87,7 +87,7 @@ namespace LibraryProject1
             {
                 Title = "Song of Blood and Stone",
                 Author = "L. Penelope",
-                Status = false,
+                Status = true,
                 DueDate = DateTime.Now
             });
             bookList.Add(new Book()
@@ -110,8 +110,9 @@ namespace LibraryProject1
             //};
             //FileService.AddBook(newBook, fileName);
             //FileService.PrintBooksFile(fileName);
-            List<Book> books = FileService.SearchByType("Tomi Adeyemi", fileName, SearchTypeEnum.Author);
-            FileService.PrintBooks(books);
+            FileService.SearchByType("L. Penelope", fileName, SearchTypeEnum.Author);
+            
+
             //CheckingOutBook(fileName, "Tomi Adeyemi");
             //FileService.PrintBooksFile(fileName);
             /*
